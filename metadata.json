@@ -1,0 +1,6 @@
+{
+  "name": "Pest Control",
+  "description": "Professional residential and commercial pest control, termite protection, rodent proofing, and eco-friendly extermination services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
