@@ -1,8 +1,11 @@
+import { IMAGES } from '../assets/images';
+
 export interface Product {
   id: string;
   name: string;
   category: 'Traps & Baits' | 'Repellents' | 'Exclusion Hardware' | 'Eco & Botanical' | 'Protective Gear';
   price: number;
+  image: string;
   rating: number;
   reviewsCount: number;
   inStock: boolean;
@@ -20,6 +23,7 @@ export const PRODUCTS: Product[] = [
     name: 'ProShield Tamper-Resistant Rodent Bait Station (Pack of 2)',
     category: 'Traps & Baits',
     price: 34.99,
+    image: IMAGES.productBaitStation,
     rating: 4.88,
     reviewsCount: 142,
     inStock: true,
@@ -40,6 +44,7 @@ export const PRODUCTS: Product[] = [
     name: 'UltraSonic Multi-Frequency Pest Deterrent Unit',
     category: 'Repellents',
     price: 49.50,
+    image: IMAGES.commercialFacility,
     rating: 4.75,
     reviewsCount: 89,
     inStock: true,
@@ -60,6 +65,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pure Copper Stuf-Fit Rodent & Snail Exclusion Mesh (100 ft)',
     category: 'Exclusion Hardware',
     price: 28.00,
+    image: IMAGES.serviceRodent,
     rating: 4.95,
     reviewsCount: 210,
     inStock: true,
@@ -80,6 +86,7 @@ export const PRODUCTS: Product[] = [
     name: 'EcoShield Botanical Insect Barrier Spray (32 oz Concentrate)',
     category: 'Eco & Botanical',
     price: 38.25,
+    image: IMAGES.heroPestControl,
     rating: 4.91,
     reviewsCount: 167,
     inStock: true,
@@ -100,6 +107,7 @@ export const PRODUCTS: Product[] = [
     name: 'GroundWatch In-Soil Termite Detection Stakes (Box of 8)',
     category: 'Traps & Baits',
     price: 42.00,
+    image: IMAGES.serviceTermite,
     rating: 4.82,
     reviewsCount: 78,
     inStock: true,
@@ -120,6 +128,7 @@ export const PRODUCTS: Product[] = [
     name: 'ArmorSeal Aluminum & Neoprene Exterior Door Sweep (36")',
     category: 'Exclusion Hardware',
     price: 24.50,
+    image: IMAGES.serviceBedbug,
     rating: 4.93,
     reviewsCount: 125,
     inStock: true,

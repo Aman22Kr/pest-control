@@ -1,3 +1,5 @@
+import { IMAGES } from '../assets/images';
+
 export interface Pest {
   id: string;
   name: string;
@@ -5,6 +7,7 @@ export interface Pest {
   category: 'Insects' | 'Rodents' | 'Stinging' | 'Wood-Destroying' | 'Parasites';
   riskLevel: 'Moderate' | 'High' | 'Severe';
   description: string;
+  image: string;
   size: string;
   habitat: string;
   signsOfInfestation: string[];
@@ -24,6 +27,7 @@ export const PESTS: Pest[] = [
     category: 'Wood-Destroying',
     riskLevel: 'Severe',
     description: 'Subterranean termites live in underground colonies and build distinctive mud tunnels to reach above-ground wood structures. They cause over $5 billion in property damage annually across the United States.',
+    image: IMAGES.pestTermites,
     size: '1/8 inch (workers), 1/2 inch (swarmers)',
     habitat: 'Moist soil, crawlspaces, wall voids, foundation perimeters',
     signsOfInfestation: [
@@ -55,6 +59,7 @@ export const PESTS: Pest[] = [
     category: 'Parasites',
     riskLevel: 'High',
     description: 'Nocturnal blood-feeding parasites that nest within mattress seams, headboards, baseboards, and electrical outlets. Their microscopic eggs and extreme chemical resistance make professional thermal eradication essential.',
+    image: IMAGES.pestBedbugs,
     size: '1/4 inch (apple seed size)',
     habitat: 'Mattresses, bed frames, box springs, headboards, luggage, soft upholstery',
     signsOfInfestation: [
@@ -86,6 +91,7 @@ export const PESTS: Pest[] = [
     category: 'Rodents',
     riskLevel: 'Severe',
     description: 'Highly adaptable rodents capable of chewing through wood, plastics, drywall, and soft metals. They contaminate food supplies, gnaw electrical wiring causing house fires, and reproduce explosively.',
+    image: IMAGES.pestRats,
     size: '7 to 10 inches body length + 6-8 inch tail',
     habitat: 'Attics, crawlspaces, burrows under slabs, wall cavities, sewer lines',
     signsOfInfestation: [
@@ -117,6 +123,7 @@ export const PESTS: Pest[] = [
     category: 'Insects',
     riskLevel: 'High',
     description: 'The most prolific domestic cockroach species, capable of producing hundreds of offspring from a single egg capsule. They harbor behind kitchen appliances and in warm electrical motors, spreading bacteria.',
+    image: IMAGES.pestCockroach,
     size: '1/2 to 5/8 inch long',
     habitat: 'Kitchens, bathrooms, motor compartments of refrigerators, dishwashers',
     signsOfInfestation: [
@@ -148,6 +155,7 @@ export const PESTS: Pest[] = [
     category: 'Wood-Destroying',
     riskLevel: 'High',
     description: 'Large black ants that excavate smooth galleries inside damp structural wood to nest. Unlike termites, they do not eat wood, but hollow out load-bearing wall studs and roof beams.',
+    image: IMAGES.pestTermites,
     size: '1/4 to 1/2 inch (large)',
     habitat: 'Moist wall framing, under sinks, window sills, foam insulation, hollow doors',
     signsOfInfestation: [
@@ -178,6 +186,7 @@ export const PESTS: Pest[] = [
     category: 'Stinging',
     riskLevel: 'Severe',
     description: 'Aggressive social wasps that construct papery nests underground, inside wall voids, under eaves, and within soffits. They can sting repeatedly and release alarm pheromones to mobilize colony swarms.',
+    image: IMAGES.serviceRodent,
     size: '3/8 to 5/8 inch',
     habitat: 'Ground burrows, attic rafters, wall voids, roof overhangs, shrubs',
     signsOfInfestation: [
@@ -208,6 +217,7 @@ export const PESTS: Pest[] = [
     category: 'Insects',
     riskLevel: 'Severe',
     description: 'Venomous spiders native to North America that hide in quiet, undisturbed locations such as crawlspaces, woodpiles, shoe boxes, sheds, and boiler rooms.',
+    image: IMAGES.serviceBedbug,
     size: '1/2 inch body, 1.5 inch leg span',
     habitat: 'Garages, crawlspaces, water meter boxes, wood stacks, quiet storage boxes',
     signsOfInfestation: [
@@ -238,6 +248,7 @@ export const PESTS: Pest[] = [
     category: 'Insects',
     riskLevel: 'High',
     description: 'Aggressive biters that breed in stagnant standing water as small as a bottle cap. Adults rest in shady foliage during heat and swarm during morning and dusk.',
+    image: IMAGES.commercialFacility,
     size: '1/8 to 3/8 inch',
     habitat: 'Standing water, clogged gutters, dense foliage, tall grass, bird baths',
     signsOfInfestation: [
@@ -256,7 +267,7 @@ export const PESTS: Pest[] = [
       'Trim tall brush, ivy, and ornamental grasses around outdoor living areas'
     ],
     diyFeasibility: 'Moderate',
-    recommendedServiceId: 'mosquito-yard-barrier',
+    recommendedServiceId: 'residential-defense',
     commonSeasons: 'Late Spring through first hard Frost',
     color: 'Silver-striped black (Tiger) or grayish-brown'
   }

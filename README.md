@@ -105,7 +105,8 @@ pest-control/
 ├── public/
 ├── src/
 │   ├── assets/
-│   │   └── images/             # Generated high-resolution commercial images
+│   │   ├── images/             # Generated high-resolution commercial images
+│   │   └── images.ts           # Centralized Vite static asset registry for bundling
 │   ├── components/
 │   │   ├── AdBanner.tsx        # Compact reusable advertisement placeholder
 │   │   ├── Footer.tsx          # Comprehensive brand footer

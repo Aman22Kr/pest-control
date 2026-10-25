@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../data/servicesData';
 import { PESTS } from '../data/pestsData';
+import { IMAGES } from '../assets/images';
 import { AdBanner } from '../components/AdBanner';
 import { VideoPlaceholder } from '../components/VideoPlaceholder';
 import { ZipChecker } from '../components/ZipChecker';
@@ -118,7 +119,7 @@ export const HomePage: React.FC = () => {
             >
               <div className="relative rounded-lg overflow-hidden shadow-lg border border-slate-200 bg-slate-100 aspect-[4/3]">
                 <img
-                  src="/src/assets/images/hero_pest_control_1792897643495.jpg"
+                  src={IMAGES.heroPestControl}
                   alt="Certified Pest Control technician inspecting residential foundation"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -326,19 +327,31 @@ export const HomePage: React.FC = () => {
             {matchedPests.slice(0, 4).map((pest) => (
               <div
                 key={pest.id}
-                className="p-5 rounded-lg border border-slate-200 hover:border-emerald-700/60 transition-all bg-slate-50/50 flex flex-col justify-between"
+                className="overflow-hidden rounded-lg border border-slate-200 hover:border-emerald-700/60 transition-all bg-white flex flex-col justify-between shadow-sm"
               >
-                <div>
-                  <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
-                    <span>{pest.category}</span>
-                    <span className="text-[11px] font-semibold text-rose-700">Risk: {pest.riskLevel}</span>
+                <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
+                  <img
+                    src={pest.image}
+                    alt={pest.name}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute top-2.5 right-2.5 bg-rose-950/80 backdrop-blur-sm text-rose-200 text-[10px] font-semibold px-2 py-0.5 rounded">
+                    Risk: {pest.riskLevel}
                   </div>
+                </div>
 
-                  <h4 className="text-base font-bold text-slate-900">
-                    <Link to={`/pests/${pest.id}`} className="hover:text-emerald-800">
-                      {pest.name}
-                    </Link>
-                  </h4>
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="text-[11px] font-medium text-emerald-800 uppercase tracking-wider mb-1">
+                      {pest.category}
+                    </div>
+
+                    <h4 className="text-base font-bold text-slate-900">
+                      <Link to={`/pests/${pest.id}`} className="hover:text-emerald-800">
+                        {pest.name}
+                      </Link>
+                    </h4>
 
                   <div className="text-xs text-slate-500 italic mt-0.5">
                     {pest.scientificName}
@@ -368,7 +381,8 @@ export const HomePage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
           </div>
 
           <div className="mt-8 text-center">

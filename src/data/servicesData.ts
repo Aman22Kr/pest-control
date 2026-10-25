@@ -1,3 +1,5 @@
+import { IMAGES } from '../assets/images';
+
 export interface ServicePricingTier {
   name: string;
   price: string;
@@ -42,7 +44,7 @@ export const SERVICES: Service[] = [
     subtitle: 'Comprehensive subterranean and drywood termite defense with Sentricon® baiting and liquid barriers',
     tagline: 'Guaranteed 100% elimination with transfer-effect non-repellent barrier tech.',
     description: 'Our certified termite specialists perform high-precision acoustic, thermal, and optical inspections of your foundation, crawlspaces, and structural framing. We deploy advanced EPA-registered liquid termiticide barriers and smart bait stations that eradicate entire colonies, including the reproductive queen.',
-    image: '/src/assets/images/service_termite_1792897645321.jpg',
+    image: IMAGES.serviceTermite,
     rating: 4.96,
     reviewsCount: 384,
     inspectionFee: 'Free with treatment',
@@ -140,7 +142,7 @@ export const SERVICES: Service[] = [
     subtitle: 'Permanent rat and mouse eviction with structural entry-point sealing and sanitary cleanup',
     tagline: 'We don’t just trap mice; we seal your home so they never return.',
     description: 'Mice can squeeze through holes the size of a dime, and rats through nickel-sized gaps. Our complete rodent protocol pairs humane multi-catch removal with commercial-grade exclusion carpentry using stainless steel mesh, copper gauze, and metal flashing.',
-    image: '/src/assets/images/service_rodent_1792897646304.jpg',
+    image: IMAGES.serviceRodent,
     rating: 4.94,
     reviewsCount: 420,
     inspectionFee: 'Included with service',
@@ -234,7 +236,7 @@ export const SERVICES: Service[] = [
     subtitle: 'One-day chemical-free thermal elimination penetrating mattresses, walls, and furniture',
     tagline: 'Dead in one visit: 100% kill rate of adults, nymphs, and microscopic eggs.',
     description: 'Bed bugs have developed high resistance to common over-the-counter pesticides. Our state-of-the-art electric thermal heat trailers raise ambient temperatures to a lethal 122°F–135°F for sustained hours, penetrating deep into walls, baseboards, and mattresses where chemicals cannot reach.',
-    image: '/src/assets/images/service_bedbug_1792897645161.jpg',
+    image: IMAGES.serviceBedbug,
     rating: 4.98,
     reviewsCount: 312,
     inspectionFee: 'Credited toward treatment',
@@ -327,7 +329,7 @@ export const SERVICES: Service[] = [
     subtitle: 'HACCP, USDA, and FDA compliant pest monitoring programs for food processing, logistics, and retail',
     tagline: 'Audit-ready pest compliance that protects your brand reputation.',
     description: 'We deliver comprehensive Integrated Pest Management (IPM) designed specifically for commercial dining, grocery chains, food processing facilities, pharmaceutical warehouses, and corporate complexes with full digital documentation.',
-    image: '/src/assets/images/commercial_facility_1792897647296.jpg',
+    image: IMAGES.commercialFacility,
     rating: 4.97,
     reviewsCount: 260,
     inspectionFee: 'Complimentary commercial facility audit',
@@ -421,7 +423,7 @@ export const SERVICES: Service[] = [
     subtitle: 'Seasonal exterior perimeter defense protecting your family from 30+ common crawling and stinging pests',
     tagline: 'Exterior perimeter barrier keeps pests outside so we never need to spray inside.',
     description: 'Our flagship residential service builds an impenetrable 3-foot up and 3-foot out micro-encapsulated perimeter shield around your foundation. We sweep eaves for cobwebs and wasp nests, treat plumbing wall voids, and return seasonally to adapt protection against evolving pest patterns.',
-    image: '/src/assets/images/hero_pest_control_1792897643495.jpg',
+    image: IMAGES.heroPestControl,
     rating: 4.95,
     reviewsCount: 580,
     inspectionFee: 'Free with any maintenance plan',
@@ -515,7 +517,7 @@ export const SERVICES: Service[] = [
     subtitle: 'Safe, same-day extraction of yellow jacket colonies, hornet football nests, and humane honeybee relocation',
     tagline: 'Fast emergency removal before painful stings happen.',
     description: 'Stinging insects threaten outdoor family gatherings and can cause severe allergic emergencies. Our specialized team uses protective bee-suits, thermal cameras to locate hidden wall nests, and aerosol freeze-treatments to safely eliminate aggressive colonies.',
-    image: '/src/assets/images/service_rodent_1792897646304.jpg',
+    image: IMAGES.serviceRodent,
     rating: 4.96,
     reviewsCount: 195,
     inspectionFee: 'Included with removal',

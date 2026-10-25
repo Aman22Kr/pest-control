@@ -78,6 +78,19 @@ export const ProductDetailPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column: Product Details & Specs */}
           <div className="lg:col-span-8 space-y-8">
+            {/* Product Photo */}
+            <div className="relative rounded-lg overflow-hidden border border-slate-200 aspect-[16/10] shadow-sm bg-slate-100">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded">
+                {product.category}
+              </div>
+            </div>
+
             <div className="bg-white p-6 sm:p-8 rounded-lg border border-slate-200 space-y-4">
               <h3 className="text-lg font-bold text-slate-900">
                 Product Description & Mechanics

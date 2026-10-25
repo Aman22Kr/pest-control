@@ -108,6 +108,25 @@ export const PestDetailPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Main Left Details */}
           <div className="lg:col-span-8 space-y-8">
+            {/* Pest Macro Photograph */}
+            <div className="relative rounded-lg overflow-hidden border border-slate-200 aspect-[16/9] shadow-sm bg-slate-100">
+              <img
+                src={pest.image}
+                alt={pest.name}
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute bottom-4 left-4 right-4 bg-slate-900/85 backdrop-blur-sm p-3.5 rounded text-white text-xs flex items-center justify-between">
+                <div>
+                  <span className="font-semibold block">{pest.name} ({pest.scientificName})</span>
+                  <span className="text-slate-300 text-[11px]">Primary Habitat: {pest.habitat}</span>
+                </div>
+                <span className="px-2.5 py-1 rounded bg-rose-900/80 text-rose-200 font-semibold text-[11px]">
+                  Risk: {pest.riskLevel}
+                </span>
+              </div>
+            </div>
+
             {/* Description & Biological Profile */}
             <div className="bg-white p-6 sm:p-8 rounded-lg border border-slate-200 space-y-4">
               <h3 className="text-lg font-bold text-slate-900">

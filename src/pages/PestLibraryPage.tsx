@@ -79,6 +79,18 @@ export const PestLibraryPage: React.FC = () => {
               key={pest.id}
               className="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:border-slate-300 transition-all flex flex-col justify-between group"
             >
+              <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
+                <img
+                  src={pest.image}
+                  alt={pest.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute top-2.5 right-2.5 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-semibold px-2 py-0.5 rounded">
+                  {pest.category}
+                </div>
+              </div>
+
               <div className="p-6">
                 <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
                   <span className="font-medium text-slate-700">{pest.category}</span>
